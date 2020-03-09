@@ -1,7 +1,7 @@
 # i3 config file
-##############
-# # --  thomasl--# #
-##############
+###################
+# # --  thomasl@x230 --# #
+###################
 
 ##################
 # #-- Basic Bindings --# #
@@ -20,7 +20,7 @@ font pango:DejaVu Sans Mono 9
 ####################
 # #-- Basic Definitions --# #
 ####################
-#for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 1
 gaps inner 10
 gaps outer 10
 
@@ -47,6 +47,15 @@ exec --no-startup-id picom --config $HOME/.config/picom/picom.conf
 #exec --no-startup-id pulseaudio --start 
 exec --no-startup-id nitrogen --restore
 exec_always--no-startup-id $HOME/.config/polybar/launch.sh
+
+
+################
+# #-- Audio Bind --# #
+################
+bindsym XF86AudioMute exec --no-startup-id pulsemixer --mute 
+bindsym Shift+XF86AudioMute exec --no-startup-id pulsemixer --unmute
+bindsym XF86AudioLowerVolume exec --no-startup-id pulsemixer  --change-volume -5
+bindsym XF86AudioRaiseVolume exec --no-startup-id pulsemixer --change-volume +5
 
 
 ############################
