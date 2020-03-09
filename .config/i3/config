@@ -57,6 +57,12 @@ bindsym Shift+XF86AudioMute exec --no-startup-id pulsemixer --unmute
 bindsym XF86AudioLowerVolume exec --no-startup-id pulsemixer  --change-volume -5
 bindsym XF86AudioRaiseVolume exec --no-startup-id pulsemixer --change-volume +5
 
+######################
+# #-- xbacklight bind --# #
+# #####################
+bindsym Ctrl+F8 exec --no-startup-id xbacklight -inc -10
+bindsym Ctrl+F9 exec --no-startup-id xbacklight -inc +10
+
 
 ############################
 # #-- Network Manager nm-applet --# #
