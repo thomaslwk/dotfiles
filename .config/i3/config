@@ -37,7 +37,7 @@ bindsym $mod+F2 exec --no-startup-id firefox
 bindsym $mod+F3 exec ranger
 bindsym $mod+F4 exec spotify
 bindsym $mod+F5 exec telegram-desktop 
-bindsym $mod+0 exec i3lock
+bindsym $mod+l exec i3lock
 
 
 ########################
@@ -83,9 +83,9 @@ bindsym $mod+j                  focus left
 bindsym $mod+Shift+j      move left 30
 bindsym $mod+Ctrl+j        move workspace to output left
 
-bindsym $mod+l                   focus right
-bindsym $mod+Shift+l       move right 30
-bindsym $mod+Ctrl+l         move workspace to output right
+bindsym $mod+k                   focus right
+bindsym $mod+Shift+k       move right 30
+bindsym $mod+Ctrl+k         move workspace to output right
 
 bindsym $mod+Left                   focus left
 bindsym $mod+Shift+Left      move left 30
