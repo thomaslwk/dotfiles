@@ -1,6 +1,6 @@
 !!#URxvt.font:     xft:bitstream vera sans mono:size=10:antialias=true
 !!#URxvt.boldFont: xft:bitstream vera sans mono:bold:size=10:antialias=true
-URxvt.font: xft:ubuntu mono:isze=8:antialias=true 
+URxvt.font: xft:ubuntu mono:bold:size=8:antialias=true 
 URxvt.boldFont: xft ubuntu mono:bold:size8:antialias=true
 URxvt.scrollBar: false
 URxvt.background: #1b1918
