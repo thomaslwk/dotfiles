@@ -7,10 +7,9 @@
 (tooltip-mode -1)     ;Disable tooltip
 (set-fringe-mode 10)  ;Set width for left and right edges
 (menu-bar-mode -1)    ;Disable menu bar
-;; Font and theme config 
+;; Font 
 (set-face-attribute 'default nil :font "Fira Code" :height 150)
-(load-theme 'tango-dark)
-;; Set ESC to quit - Copy vim
+;; Set ESC to quit 
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 ;; Display column number count
 (column-number-mode)
@@ -56,6 +55,12 @@
 ;; not already installed. 
 (setq use-package-always-ensure t)
 
+;; Set theme and icons 
+(use-package vscode-dark-plus-theme
+  :config
+  (load-theme 'vscode-dark-plus t))
+(use-package all-the-icons)
+
 ;; IVY
 ;; Use ivy for binding setup
 ;; for buffer completion. 
@@ -80,12 +85,13 @@
 (use-package ivy-rich
   :init
   (ivy-rich-mode 1))
+
 ;; Counsel
 ;; Bind default M-x to use counsel
 (use-package counsel
   :bind (("M-x" . counsel-M-x)
 	 ("C-x b" . counsel-ibuffer)
-	 ("C-x C-f" . conusel-find-file)
+	 ("C-x C-f" . counsel-find-file)
 	 :map minibuffer-local-map
 	 ("C-r" . 'counsel-minibuffer-history))
   :config
@@ -93,13 +99,14 @@
 
 ;; Minimalist modeline theme 
 (use-package doom-modeline
-  :ensure t
   :init (doom-modeline-mode 1)
-  :custom ((doom-modeline-height 10)))
+  :custom ((doom-modeline-height 5)))
+
 ;; Rainbow delimiter
 (use-package rainbow-delimiters
   :hook (prog-mode . rainbow-delimiters-mode))
-;; Which-key (command suggestion prompt)
+
+; Which-key (command suggestion prompt)
 ;; init -> will auto run everytime, regardless
 ;; packages get loaded or not. Allows invoke
 ;; the mode directly, when which-key is loaded
@@ -113,16 +120,82 @@
   :config
   (setq which-key-idle-delay 0.3)) 
 
+;; Helpful (Better built-in help tool)
+(use-package helpful
+  :custom
+  (counsel-describe-function-function #'helpful-callable)
+  (counsel-describe-variable-funciton #'helpful-variable)
+  :bind
+  ([remap describe-function] . counsel-describe-function)
+  ([remap describe-command] . helpful-command)
+  ([remap describe-variable] . counsel-describe-variable)
+  ([remap describe-key] . helpful-key))
+
+;; General Package
+;; Define keybinds with general, using Ctrl space for
+;; special key. 
+(use-package general
+  :config 
+  (general-create-definer thomasl/leader-keys
+    :keymaps '(normal insert visual emacs)
+    :prefix "SPC"
+    :global-prefix "C-SPC")
+
+  (thomasl/leader-keys
+    "t" '(:ignore t :which-key "toggles")
+    "tt" '(counsel-load-theme :which-key "choose theme")))
+
+;; EviL
+;; Setting up Vim keybinds with Evil 
+(use-package evil
+  :init
+  (setq evil-want-integration t)
+  (setq evil-want-keybinding nil)
+  (setq evil-want-C-u-scroll t)
+  (setq evil-want-C-i-jump nil)
+  :config
+  (evil-mode 1)
+  (define-key evil-insert-state-map (kbd "C-g") 'evil-normal-state)
+  ;; Use visual line notions even outside of visual-line-mode buffers
+  (evil-global-set-key 'motion "j" 'evil-next-visual-line)
+  (evil-global-set-key 'motion "k" 'evil-previous-visual-line)
+  
+  (evil-set-initial-state 'messages-buffer-mode 'normal)
+  (evil-set-initial-state 'dashboard-mode 'normal))
+
+(use-package evil-collection
+  :after evil
+  :config
+  (evil-collection-init))
+
+;; Hydra
+;; Transient keybind for scale text
+(use-package hydra)
+(defhydra hydra-text-scale (:timeout 4)
+  "scale text"
+  ("j" text-scale-increase "in")
+  ("k" text-scale-decrease "out")
+  ("f" nil "finished" :exit t))
+; lead
+(thomasl/leader-keys
+  "ts" '(hydra-text-scale/body :which-key "scale text")) 
+
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ivy-rich-mode t)
  '(package-selected-packages
-   '(ivy-rich which-key rainbow-delimiters use-package monokai-theme doom-modeline counsel command-log-mode)))
+   '(hydra evil-collection evil general vscode-dark-plus-theme helpful ivy-rich which-key rainbow-delimiters use-package monokai-theme doom-modeline counsel command-log-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+
+
+
