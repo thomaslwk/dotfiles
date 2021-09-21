@@ -120,8 +120,13 @@ source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# Alias 
+source ~/projects/dot-files/scripts/.alias 
+
 # Extras 
 export GEM_HOME="$HOME/.gem"
 source $(dirname $(gem which colorls))/tab_complete.sh
 
 source ~/.keychain/MBP13.local-sh
+
+
