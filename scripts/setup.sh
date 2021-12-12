@@ -41,12 +41,11 @@ git config --global user.name "thomaslwk"
 brew install tmux 
 brew install ranger 
 brew instal htop
-brew install lolcat
 brew install fzf
 brew install vim 
 brew install wget 
+brew install curl
 brew install zsh-syntax-highlighting
-
 
 ###############################
 # #### Install brew cask #### #
@@ -60,9 +59,9 @@ brew cask install font-fira-code
 echo "\nBrew cleanup..."
 brew cleanup 
 
-############
-# setup symlink 
-
+###########################
+# #### setup symlink #### #
+###########################
 ln -s ~/projects/dot-files/mac-conf/.tmux.conf ~/.tmux.conf
 ln -s ~/projects/dot-files/mac-conf/.vimrc ~/.vimrc
 ln -s ~/projects/dot-files/mac-conf/.zshrc ~/.zshrc
