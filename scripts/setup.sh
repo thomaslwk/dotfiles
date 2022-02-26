@@ -65,4 +65,5 @@ brew cleanup
 ln -s ~/projects/dot-files/mac-conf/.tmux.conf ~/.tmux.conf
 ln -s ~/projects/dot-files/mac-conf/.vimrc ~/.vimrc
 ln -s ~/projects/dot-files/mac-conf/.zshrc ~/.zshrc
+ln -s ~/projects/dot-files/mac-conf/starship.toml ~/.config/starship.toml
 
