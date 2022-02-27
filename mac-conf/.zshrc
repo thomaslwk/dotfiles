@@ -32,18 +32,36 @@ plugins=(
 )
 source $ZSH/oh-my-zsh.sh
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+#################
+## P10k config ##
+#################
+#source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
 
-#################
-# ### PYENV ### # 
-#################
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+#[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+#source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
+
+###########
+## Pyenv ##
+############ 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
-PATH=$(pyenv root)/shims:$PATH
 
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+##################
+## ANDROID PATH ##
+##################
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$ANDROID_HOME/platform-tools:$PATH
+export PATH=$ANDROID_HOME/tools:$PATH
 
+############
+## VSCode ## 
+############
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin" 
 
+##############
+## Starship ##
+##############
+eval "$(starship init zsh)"
