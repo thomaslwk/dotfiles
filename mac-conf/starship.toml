@@ -2,17 +2,17 @@
 ## Starship Config ##
 ####################
 # Inserts a blank line between shell prompts
-add_newline = false
+add_newline = true
 
 # Replace the "❯" symbol in the prompt with "➜"
 [character] 
-#success_symbol = "[➜](bold green)"
 success_symbol = "[λ](bold #e25e32)"
+error_symbol = "[λ](bold red)"
 
 [hostname]
 ssh_only = false
 format = "[thomaslwk]($style) in "
-style = "bold green"
+style = "green"
 disabled = false
 
 # Disable the package module, hiding it from the prompt completely
@@ -21,9 +21,15 @@ disabled = true
 
 [directory]
 truncate_to_repo = true
+style = "cyan"
 home_symbol = "~"
 
 [git_branch]
 symbol = ""
 truncation_length = 20
-truncation_symbol = ""
+style = "purple"
+
+[git_status]
+format = '([\[$all_status\]]($style) )'
+style = "bold #809fff"
+disabled = true
