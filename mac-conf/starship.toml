@@ -17,20 +17,13 @@ disabled = false
 
 # Disable the package module, hiding it from the prompt completely
 [package]
-disabled = false
+disabled = true
 
 [directory]
 truncate_to_repo = true
-home_symbol = "🏡 ~"
+home_symbol = "~"
 
 [git_branch]
 symbol = ""
 truncation_length = 20
 truncation_symbol = ""
-
-[git_status]
-format = '([\[$all_status\]]($style) )'
-style = "bold #809fff"
-
-[java]
-style = "bold blue"
