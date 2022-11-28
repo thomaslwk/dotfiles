@@ -45,6 +45,8 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
+# Syntax highlighting for man pages using bat 
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 ##################################
 # ## LOCATION $PATH VARIABLES ## #
@@ -53,7 +55,7 @@ eval "$(pyenv init -)"
 ## HOMEBREW
 export PATH="/opt/homebrew/bin:$PATH"
 
-## ANDROID PATH
+## ANDROID
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$ANDROID_HOME/platform-tools:$PATH
 export PATH=$ANDROID_HOME/tools:$PATH
