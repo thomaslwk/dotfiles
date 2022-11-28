@@ -7,6 +7,7 @@
 - link:
    ~/.zshrc: zshrc
    ~/.tmux.conf: tmux.conf
+   ~/.starship.toml: starship.toml
    ~/.vimrc: vimrc
    ~/.gitconfig: gitconfig
    ~/.config/bat: 
@@ -18,11 +19,11 @@
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]  
-    -
-        command: ./setup_homebrew.zsh
-        stdin: true
-        stdout: true 
-        stderr: true  
+    # -
+    #     command: ./setup_homebrew.zsh
+    #     stdin: true
+    #     stdout: true 
+    #     stderr: true  
 
 
     # - echo "Test shell script"

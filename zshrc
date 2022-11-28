@@ -9,9 +9,12 @@ echo "running .zshrc... "
 export LANG=en_US.UTF-8
 
 ## Customize Prompt
-PROMPT='%1~ %L %# '
-## Right Prompt 
-RPROMPT='%*'
+# PROMPT='%1~ %L %# '
+# ## Right Prompt 
+# RPROMPT='%*'
+
+## Use Starship prompt 
+
 
 
 ###############
@@ -65,3 +68,8 @@ export PATH=$ANDROID_HOME/tools:$PATH
 ## VSCode 
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin" 
 
+
+#########################
+# ## STARSHIP PROMPT ## #
+#########################
+eval "$(starship init zsh)"
