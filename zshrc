@@ -18,7 +18,7 @@ RPROMPT='%*'
 # ## ALIAS ## #
 ###############
 alias ls='ls -lAFh'
-
+alias man=batman
 
 ##########################
 # ## CUSTOM FUNCTIONS ## #
@@ -27,6 +27,11 @@ alias ls='ls -lAFh'
 ## Make Directory Function 
 function mkcd() {
   mkdir -p "$@" && cd "$_";
+}
+
+## Check directory exist
+function exists() {
+  command -v $1 > /dev/null 2>&1
 }
 
 
@@ -44,9 +49,6 @@ function mkcd() {
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-
-# Syntax highlighting for man pages using bat 
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 ##################################
 # ## LOCATION $PATH VARIABLES ## #

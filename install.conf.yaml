@@ -9,6 +9,9 @@
    ~/.tmux.conf: tmux.conf
    ~/.vimrc: vimrc
    ~/.gitconfig: gitconfig
+   ~/.config/bat: 
+      create: true
+      path: config/bat
 
 - create:
     - ~/Projects
