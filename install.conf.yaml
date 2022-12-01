@@ -13,6 +13,12 @@
    ~/.config/bat: 
       create: true
       path: config/bat
+   ~/.config/yabai:
+      create: true
+      path: config/yabai
+   ~/.config/skhd: 
+      create: true 
+      path: config/skhd
 
 - create:
     - ~/Projects
