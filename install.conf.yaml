@@ -5,11 +5,10 @@
 - clean: ['~']
 
 - link:
-   ~/.zshrc: zshrc
-   ~/.tmux.conf: tmux.conf
-   ~/.starship.toml: starship.toml
-   ~/.vimrc: vimrc
-   ~/.gitconfig: gitconfig
+   ~/.zshrc:
+   ~/.tmux.conf: 
+   ~/.vimrc: 
+   ~/.gitconfig: 
    ~/.config/bat: 
       create: true
       path: config/bat

@@ -44,23 +44,23 @@ yabai -m config normal_window_border_color   0xFF0097A7
 # Rule and Signals #
 ####################
 # set floating app rules 
-yabai -m rule --add app="System Preferences" manage=off
+yabai -m rule --add app="^System Settings$" sticky=on layer=above manage=off
 
 # set dedicated spaces for different apps
 yabai -m space 2 --label messaging 
-yabai -m rule --add app="Telegram" space 2 
-yabai -m rule --add app="WhatsApp" space 2 
+yabai -m rule --add app="^Telegram$" space 2 
+yabai -m rule --add app="^WhatsApp$" space 2 
 
 yabai -m space 3 --label mail 
-yabai -m rule --add app="Microsoft Outlook" space 3
-yabai -m rule --add app="Mail" space 3
+yabai -m rule --add app="^Microsoft Outlook$" space 3
+yabai -m rule --add app="^Mail$" space 3
 
 yabai -m space 4 --label comms 
-yabai -m rule --add app="Discord" space 4 
-yabai -m rule --add app="Microsoft Teams" space 4 
+yabai -m rule --add app="^Discord$" space 4 
+yabai -m rule --add app="^Microsoft Teams$" space 4 
 
 yabai -m space 5 --label music
-yabai -m rule --add app="Spotify" space 5 
+yabai -m rule --add app="^Spotify$" space 5 
 
 yabai -m space 6 --label dev 
-yabai -m rule --add app="Code" space 6
+yabai -m rule --add app="^Code$" space 6
