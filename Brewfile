@@ -10,6 +10,12 @@ tap "mongodb/brew"
 brew "bat"
 # Modern replacement for 'ls'
 brew "exa"
+# Play, record, convert, and stream audio and video
+brew "ffmpeg"
+# Command-line fuzzy finder written in Go
+brew "fzf"
+# Interactive command-line tool for using emoji in commit messages
+brew "gitmoji"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
 # Lightweight and flexible command-line JSON processor
@@ -20,8 +26,6 @@ brew "nvm"
 brew "pyenv"
 # File browser
 brew "ranger"
-# Cross-shell prompt for astronauts
-brew "starship"
 # Terminal multiplexer
 brew "tmux"
 # Bash scripts that integrate bat with various command-line tools
@@ -30,7 +34,13 @@ brew "eth-p/software/bat-extras"
 brew "koekeishiya/formulae/skhd"
 # A tiling window manager for macOS based on binary space partitioning.
 brew "koekeishiya/formulae/yabai", args: ["HEAD"]
+# High-performance, schema-free, document-oriented database
+brew "mongodb/brew/mongodb-community"
 # Server and cloud storage browser
 cask "cyberduck"
 # Free and open-source image editor
 cask "gimp"
+# Retro video game emulation
+cask "openemu"
+# Collaboration platform for API development
+cask "postman"
