@@ -16,6 +16,8 @@ brew "ffmpeg"
 brew "fzf"
 # Interactive command-line tool for using emoji in commit messages
 brew "gitmoji"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
 # Lightweight and flexible command-line JSON processor
@@ -40,7 +42,5 @@ brew "mongodb/brew/mongodb-community"
 cask "cyberduck"
 # Free and open-source image editor
 cask "gimp"
-# Retro video game emulation
-cask "openemu"
 # Collaboration platform for API development
 cask "postman"

@@ -14,7 +14,7 @@ export LANG=en_US.UTF-8
 
 ### ZSH PATHS
 export ZSH=$HOME/.config/.zsh
-ZSH_THEME="half-life"
+ZSH_THEME="gentoo" # set by `omz`
 
 ###### ZSH HISTORY ######  
 # Export history config 
@@ -88,6 +88,11 @@ export PATH=$ANDROID_HOME/tools:$PATH
 ## VSCode 
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin" 
 
+## GOLANG 
+export GOPATH=$HOME/go-workspace
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
 
 ###################
 # ## OH-MY-ZSH ## #
