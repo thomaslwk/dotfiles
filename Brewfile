@@ -40,7 +40,11 @@ brew "koekeishiya/formulae/yabai", args: ["HEAD"]
 brew "mongodb/brew/mongodb-community"
 # Server and cloud storage browser
 cask "cyberduck"
+# GIT client
+cask "fork"
 # Free and open-source image editor
 cask "gimp"
 # Collaboration platform for API development
 cask "postman"
+# Virtual machines UI using QEMU
+cask "utm"
