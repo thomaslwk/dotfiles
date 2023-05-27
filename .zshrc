@@ -5,65 +5,57 @@
 ################
 # ## SET UP ## # 
 ################
-export LANG=en_US.UTF-8
-
-## Customize Prompt
-# PROMPT='%1~ %L %# '
-# ## Right Prompt 
-# RPROMPT='%*'
-
-### ZSH PATHS
+## ZSH PATHS #
 export ZSH=$HOME/.config/.zsh
-ZSH_THEME="gentoo" # set by `omz`
-
-###### ZSH HISTORY ######  
-# Export history config 
+## ZSH HISTORY  
 export HISTFILE=$ZSH/.zsh_history 
-# Load num of commands zsh will load in mem 
 export HISTSIZE=10000
-# Number of commands to save on file 
 export SAVEHIST=10000
-# Remove duplicates 
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_FIND_NO_DUPS 
 
+## VIM 
+export EDITOR=vim
 
-###############
-# ## ALIAS ## #
-###############
-alias man=batman
-#alias ls='ls -lAFh --git'
-alias exa='exa -laFh --git'
+# ================================== # 
+# ==== Oh-my-zsh installation ====== #
+# ================================== # 
+export ZSH="$HOME/.dotfiles/oh-my-zsh"
+export ZSH_CUSTOM="$ZSH/custom/plugins"
+ZSH_THEME="custom"
+source $ZSH/oh-my-zsh.sh
+## PLUGINS
+plugins=(
+  git
+  tmux
+  zsh-autosuggestions
+  fzf-zsh-plugin
+)
+###########
+## ALIAS ##
+###########
+alias g='git'
+alias gs='git status'
+alias ls='ls -l'
+# alias ls='ls -lAFh'
+# alias exa='exa -laFh --git'
 alias bbd='brew bundle dump --force --describe'
-alias trail='<<<${(F)path}'
-
-##########################
-# ## CUSTOM FUNCTIONS ## #
-##########################
+######################
+## CUSTOM FUNCTIONS ##
+######################
 ## Make Directory Function 
 function mkcd() {
   mkdir -p "$@" && cd "$_";
 }
-
 ## Check directory exist
 function exists() {
   command -v $1 > /dev/null 2>&1
 }
 
 
-#################
-# ## PLUGINS ## #
-#################
-plugins=(
-  git
-  fzf
-  tmux
-  zsh-autosuggestions
-)
-
-#######################
-# ## SET VARIABLES ## #
-#######################
+# ================================== # 
+# ========= SET VARIABLES ========== #
+# ================================== # 
 # Pyenv 
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
@@ -74,9 +66,9 @@ export NVM_DIR="$HOME/.nvm"
 source $(brew --prefix nvm)/nvm.sh
 
 
-##################################
+# =============================== #
 # ## LOCATION $PATH VARIABLES ## #
-##################################
+# =============================== #
 ## HOMEBREW
 export PATH="/opt/homebrew/bin:$PATH"
 
@@ -93,13 +85,3 @@ export GOPATH=$HOME/go-workspace
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
-
-###################
-# ## OH-MY-ZSH ## #
-###################
-source $ZSH/oh-my-zsh.sh
-
-#########################
-# ## STARSHIP PROMPT ## #
-#########################
-# eval "$(starship init zsh)"
