@@ -5,7 +5,12 @@
 ################
 # ## SET UP ## # 
 ################
-## ZSH PATHS #
+## P10k 
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+## ZSH PATHS 
 export ZSH=$HOME/.config/.zsh
 ## ZSH HISTORY  
 export HISTFILE=$ZSH/.zsh_history 
@@ -22,7 +27,7 @@ export EDITOR=vim
 # ================================== # 
 export ZSH="$HOME/.dotfiles/oh-my-zsh"
 export ZSH_CUSTOM="$ZSH/custom/plugins"
-ZSH_THEME="custom"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 source $ZSH/oh-my-zsh.sh
 ## PLUGINS
 plugins=(
@@ -36,10 +41,14 @@ plugins=(
 ###########
 alias g='git'
 alias gs='git status'
-alias ls='ls -l'
 # alias ls='ls -lAFh'
-# alias exa='exa -laFh --git'
+alias as='exa -laFh --git'
 alias bbd='brew bundle dump --force --describe'
+
+## dev alias 
+alias dot='cd ~/.dotfiles'
+alias intra='cd $HOME/projects/ncs/intra'
+
 ######################
 ## CUSTOM FUNCTIONS ##
 ######################
@@ -65,6 +74,9 @@ eval "$(pyenv init -)"
 export NVM_DIR="$HOME/.nvm"
 source $(brew --prefix nvm)/nvm.sh
 
+# ANGULAR
+source <(ng completion script)
+
 # =============================== #
 # ## LOCATION $PATH VARIABLES ## #
 # =============================== #
@@ -84,3 +96,9 @@ export GOPATH=$HOME/go-workspace
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
+
+## DOCKER
+export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
+
+## Source P10k
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
