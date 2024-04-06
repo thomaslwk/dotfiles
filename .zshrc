@@ -1,104 +1,58 @@
-# ================================= #
-# ========= ZSHRC CONFIG ========== # 
-# ================================= #
+#-------------------------------------------
+# OMZ Config  
+#-------------------------------------------
+export ZSH="$HOME/.config/oh-my-zsh"
 
-################
-# ## SET UP ## # 
-################
-## P10k 
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+ZSH_THEME="custom-dst"
+#ZSH_THEME="custom-dst"
+HYPHEN_INSENSITIVE="true"
+COMPLETION_WAITING_DOTS="true"
+HIST_STAMPS="yyyy-mm-dd"
+VI_MODE_SET_CURSOR=true
+VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
 
-## ZSH PATHS 
-export ZSH=$HOME/.config/.zsh
-## ZSH HISTORY  
-export HISTFILE=$ZSH/.zsh_history 
-export HISTSIZE=10000
-export SAVEHIST=10000
-setopt HIST_IGNORE_ALL_DUPS
-setopt HIST_FIND_NO_DUPS 
-
-## VIM 
-export EDITOR=vim
-
-# ================================== # 
-# ==== Oh-my-zsh installation ====== #
-# ================================== # 
-export ZSH="$HOME/.dotfiles/oh-my-zsh"
-export ZSH_CUSTOM="$ZSH/custom/plugins"
-ZSH_THEME="powerlevel10k/powerlevel10k"
-source $ZSH/oh-my-zsh.sh
-## PLUGINS
 plugins=(
-  git
-  tmux
-  zsh-autosuggestions
-  fzf-zsh-plugin
+	git
+	fzf
+	tmux 
+	zsh-autosuggestions
+	zsh-syntax-highlighting
 )
-###########
-## ALIAS ##
-###########
-alias g='git'
-alias gs='git status'
-# alias ls='ls -lAFh'
-alias as='exa -laFh --git'
-alias bbd='brew bundle dump --force --describe'
+source $ZSH/oh-my-zsh.sh
 
-## dev alias 
-alias dot='cd ~/.dotfiles'
-alias intra='cd $HOME/projects/ncs/intra'
+#-------------------------------------------
+# fzf  
+#-------------------------------------------
+export FZF_DEFAULT_OPTS='--height 40% 
+--layout=reverse --border=rounded
+--color=dark
+'
+export FZF_DEFAULT_COMMAND="fd . $HOME"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_DEFAULT_COMMAND='rg --files --hidden'
 
-######################
-## CUSTOM FUNCTIONS ##
-######################
-## Make Directory Function 
-function mkcd() {
-  mkdir -p "$@" && cd "$_";
-}
-## Check directory exist
-function exists() {
-  command -v $1 > /dev/null 2>&1
-}
+unsetopt sharehistory
+
+#-------------------------------------------
+# configurations
+#-------------------------------------------
+## Main 
+export EDITOR=nvim
+export GIT_EDITOR=nvim
+
+## System path
+export PATH="$PATH:/usr/local/bin"
+export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:/usr/bin"
+
+## NVM
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+## Alias and Function 
+source $HOME/.zsh_aliases
+source $HOME/.zsh_functions
 
 
-# ================================== # 
-# ========= SET VARIABLES ========== #
-# ================================== # 
-# Pyenv 
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
 
-# NVM 
-export NVM_DIR="$HOME/.nvm"
-source $(brew --prefix nvm)/nvm.sh
-
-# ANGULAR
-source <(ng completion script)
-
-# =============================== #
-# ## LOCATION $PATH VARIABLES ## #
-# =============================== #
-## HOMEBREW
-export PATH="/opt/homebrew/bin:$PATH"
-
-## ANDROID
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$ANDROID_HOME/platform-tools:$PATH
-export PATH=$ANDROID_HOME/tools:$PATH
-
-## VSCode 
-export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin" 
-
-## GOLANG 
-export GOPATH=$HOME/go-workspace
-export GOROOT=/usr/local/opt/go/libexec
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin
-
-## DOCKER
-export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
-
-## Source P10k
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

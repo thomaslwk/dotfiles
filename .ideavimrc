@@ -1,0 +1,15 @@
+sethandler a:ide
+
+## NERDTree
+set NERDTree 
+nnoremap <C-Space> :NERDTreeToggle<CR>
+
+## Highlightyank 
+set highlightedyank
+let g:highlightedyank_highlight_duration = "1000"
+
+## Quickscope 
+#set quickscope
+
+
+
