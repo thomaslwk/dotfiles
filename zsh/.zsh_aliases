@@ -1,0 +1,74 @@
+#---------------------------------------------------
+# Alias
+#---------------------------------------------------
+
+# system
+alias shutdown='sudo shutdown now'
+alias restart='sudo reboot'
+alias brightx='brightnessctl'       # brightness percentage
+alias fonts='fc-cache -f -v'        # update font cache
+
+# main
+alias l='ls --color=auto'
+alias ls='ls --color=auto'
+alias ll='ls -lahF --color=auto'
+alias la='ls -A --color=auto'
+
+# cp
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -iv'
+
+# xclip
+alias copy='xclip -selection clipboard'
+alias paste='xclip -o -selection cliboard'
+
+# others
+alias cl='clear'
+alias cat='bat'
+alias vim='nvim'
+alias vi='nvim'
+
+# Git
+alias git='git'
+alias gs='git status'
+alias gd='git diff'
+alias ga='git add'
+alias gpo='git push origin'
+
+#--------#
+# pacman #
+#--------#
+alias paci='sudo pacman -S'       # install
+alias pachi='sudo pacman -Ql'     # Pacman has installed - what files were installed in a package
+alias pacs='sudo pacman -Ss'      # search
+alias pacu='sudo pacman -Syu'     # update
+alias pacr='sudo pacman -R'       # remove package but not dependencies
+alias pacrr='sudo pacman -Rs'     # remove package with unused dependencies by other softwares
+alias pacrc='sudo pacman -Sc'     # clean cache
+alias pacls='sudo pacman -Qe'     # list installed package
+
+#-----#
+# yay #
+#-----#
+alias yayi='yay -S'       # install
+alias yayhi='yay -Ql'     # Yay has installed - what files were installed in a package
+alias yays='yay -Ss'      # search
+alias yayu='yay -Syu'     # update
+alias yayr='yay -R'       # remove package but not dependencies
+alias yayrr='yay -Rs'     # remove package with unused dependencies by other softwares
+alias yayc='yay -Sc'      # clean cache
+alias yayls='yay -Qe'     # list installed package
+
+#----------#
+# Personal #
+#----------#
+# directories 
+alias person='cd $HOME/personal'
+alias workspace='cd $HOME/workspace'
+alias tf='cd $HOME/workspace/tf'
+alias tutorial='cd $HOME/workspace/tutorials'
+alias scratch='cd $HOME/personal/scratch'
+
+alias dot="cd $HOME/personal/dotfiles"            # dotfiles
+
