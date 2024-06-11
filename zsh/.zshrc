@@ -1,10 +1,11 @@
 #-------------------------------------------
 # OMZ Config  
 #-------------------------------------------
-export ZSH="$HOME/.config/oh-my-zsh"
+export ZSH="$HOME/.config/zsh/ohmyzsh"
 
-ZSH_THEME="custom-dst"
+ZSH_THEME="dst"
 #ZSH_THEME="custom-dst"
+#ZSH_THEME="powerlevel10k/powerlevel10k"
 HYPHEN_INSENSITIVE="true"
 COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="yyyy-mm-dd"
@@ -37,13 +38,15 @@ unsetopt sharehistory
 # configurations
 #-------------------------------------------
 ## Main 
-export EDITOR=nvim
-export GIT_EDITOR=nvim
+export EDITOR=vim
+export GIT_EDITOR=vim
+export PAGER=delta
 
 ## System path
 export PATH="$PATH:/usr/local/bin"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:/usr/bin"
+export PATH="$PATH:$HOME/.cargo/bin"
 
 ## NVM
 export NVM_DIR="$HOME/.config/nvm"
@@ -51,8 +54,7 @@ export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 ## Alias and Function 
-source $HOME/.zsh_aliases
-source $HOME/.zsh_functions
+source $HOME/.config/zsh/.zsh_aliases
 
-
-
+# To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
+[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh

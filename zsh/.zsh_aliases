@@ -5,8 +5,9 @@
 # system
 alias shutdown='sudo shutdown now'
 alias restart='sudo reboot'
-alias brightx='brightnessctl'       # brightness percentage
+#alias brightx='brightnessctl'       # brightness percentage
 alias fonts='fc-cache -f -v'        # update font cache
+alias bb='brightnessctl'       # brightness percentage
 
 # main
 alias l='ls --color=auto'
@@ -20,14 +21,14 @@ alias mv='mv -iv'
 alias rm='rm -iv'
 
 # xclip
-alias copy='xclip -selection clipboard'
-alias paste='xclip -o -selection cliboard'
+#alias copy='xclip -selection clipboard'
+#alias paste='xclip -o -selection cliboard'
 
 # others
 alias cl='clear'
 alias cat='bat'
-alias vim='nvim'
-alias vi='nvim'
+alias vim='vim'
+alias vi='vim'
 
 # Git
 alias git='git'
@@ -57,7 +58,7 @@ alias yays='yay -Ss'      # search
 alias yayu='yay -Syu'     # update
 alias yayr='yay -R'       # remove package but not dependencies
 alias yayrr='yay -Rs'     # remove package with unused dependencies by other softwares
-alias yayc='yay -Sc'      # clean cache
+alias yayrc='yay -Sc'      # clean cache
 alias yayls='yay -Qe'     # list installed package
 
 #----------#
@@ -66,9 +67,11 @@ alias yayls='yay -Qe'     # list installed package
 # directories 
 alias person='cd $HOME/personal'
 alias workspace='cd $HOME/workspace'
-alias tf='cd $HOME/workspace/tf'
-alias tutorial='cd $HOME/workspace/tutorials'
-alias scratch='cd $HOME/personal/scratch'
-
+alias talia='cd $HOME/workspace/talia'
 alias dot="cd $HOME/personal/dotfiles"            # dotfiles
+
+# configs
+alias conf='cd $HOME/.config'
+alias zconf='cd $HOME/.config/zsh'
+alias srzsh='source $HOME/.config/zsh/.zshrc'
 
