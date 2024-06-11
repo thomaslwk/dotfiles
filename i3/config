@@ -161,15 +161,19 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-	position top
-        status_command i3status -c ~/.config/i3status/i3status.conf
+	position top 
+	status_command i3status -c ~/.config/i3status/i3status.conf 
 }
+#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 ############
 ## CUSTOM ## 
 ############
 # wallpaper
-exec_always --no-startup-id feh --bg-scale $HOME/personal/wallpapers/Universal/forest-1.jpg
+exec_always --no-startup-id feh --bg-scale $HOME/personal/wallpapers/w1/nord/a_large_mountain_with_a_body_of_water.jpg
+
+#exec_always --no-startup-id feh --bg-scale $HOME/personal/wallpapers/gruvwall/minimalistic/gruvbox_minimal_space.png
+
 
 # lockscreen
 #bindsym $mod+Ctrl+l exec i3lock -c 000000 
@@ -178,8 +182,12 @@ bindsym $mod+Ctrl+l exec xfce4-screensaver-command --lock
 # brigtness
 #bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl --min-val=2 -q set 3%-
 #bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl -q set 3%+
-bindsym $mod+Shift+y exec --no-startup-id brightnessctl --min-val=2 -q set 3%-
-bindsym $mod+Shift+u exec --no-startup-id brightnessctl -q set 3%+
+bindsym $mod+Shift+y exec --no-startup-id brightnessctl --min-val=5 -q set 5%-
+bindsym $mod+Shift+u exec --no-startup-id brightnessctl -q set 5%+
+
+# ddcutil
+bindsym $mod+Shift+n exec --no-startup-id ddcutil setvcp 10 + 10 
+bindsym $mod+Shift+b exec --no-startup-id ddcutil setvcp 10 - 10
 
 # volume
 bindsym $mod+Shift+o exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
@@ -188,3 +196,12 @@ bindsym $mod+Shift+m exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ tog
 
 # screenshot 
 bindsym Ctrl+Shift+s exec flameshot gui
+
+# focus wrapping 
+focus_wrapping force
+
+#######
+#THEME#
+#######
+
+#end of window title bars & borders section
