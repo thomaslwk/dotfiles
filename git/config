@@ -28,6 +28,7 @@
 [delta]
 	features = line-numbers decorations
 	line-numbers = true
+	side-by-side = true
 
 [delta "decorations"]
 	minus-style = red bold normal
