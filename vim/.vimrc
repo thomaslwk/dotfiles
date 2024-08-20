@@ -3,7 +3,7 @@ call plug#begin()
 	Plug 'tpope/vim-sensible'
 	Plug 'preservim/nerdtree'
 	Plug 'vim-airline/vim-airline'
-	Plug 'tomasiser/vim-code-dark'
+	Plug 'morhetz/gruvbox'
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'machakann/vim-highlightedyank'
 call plug#end()
@@ -14,9 +14,12 @@ set number
 " Fix colour in gnome terminal
 set t_Co=256
 
+" Keymapping
+inoremap jk <Esc>
+
 " Styling 
 set background=dark
-colorscheme codedark
+colorscheme gruvbox
 
 " Show highlight
 let g:highlightedyank_highlight_duration = 3000
