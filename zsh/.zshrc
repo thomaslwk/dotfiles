@@ -1,25 +1,16 @@
 #-------------------------------------------
-# OMZ Config  
+# ZSH Config  
 #-------------------------------------------
-export ZSH="$HOME/.config/zsh/ohmyzsh"
+#ZSH_THEME="devbuntu"
 
-ZSH_THEME="dst"
-#ZSH_THEME="custom-dst"
-#ZSH_THEME="powerlevel10k/powerlevel10k"
-HYPHEN_INSENSITIVE="true"
-COMPLETION_WAITING_DOTS="true"
-HIST_STAMPS="yyyy-mm-dd"
-VI_MODE_SET_CURSOR=true
-VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
-
+ZSH_THEME="crcandy"
 plugins=(
 	git
 	fzf
-	tmux 
 	zsh-autosuggestions
 	zsh-syntax-highlighting
 )
-source $ZSH/oh-my-zsh.sh
+source $ZDOTDIR/ohmyzsh/oh-my-zsh.sh
 
 #-------------------------------------------
 # fzf  
@@ -55,6 +46,5 @@ export NVM_DIR="$HOME/.config/nvm"
 
 ## Alias and Function 
 source $HOME/.config/zsh/.zsh_aliases
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-# To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
-[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
