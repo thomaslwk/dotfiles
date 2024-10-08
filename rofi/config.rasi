@@ -1,9 +1,0 @@
-configuration {
-	width:900;
-	lines:15;
-	columns: 1;
-	font: "OperatorMono Medium 12";
-	show-icons: true; 
-	terminal: "kitty";
-}
-@theme "/usr/share/rofi/themes/glue_pro_blue.rasi"
