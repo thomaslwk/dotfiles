@@ -5,9 +5,7 @@
 # system
 alias shutdown='sudo shutdown now'
 alias restart='sudo reboot'
-#alias brightx='brightnessctl'       # brightness percentage
-alias fonts='fc-cache -f -v'        # update font cache
-alias bb='brightnessctl'       # brightness percentage
+alias fonts='fc-cache -f -v'
 
 # main
 alias l='ls --color=auto'
@@ -20,58 +18,44 @@ alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -iv'
 
-# xclip
-#alias copy='xclip -selection clipboard'
-#alias paste='xclip -o -selection cliboard'
-
-# others
-alias cl='clear'
-alias cat='bat'
-alias vim='vim'
-alias vi='vim'
-
 # Git
 alias git='git'
 alias gs='git status'
 alias gd='git diff'
 alias ga='git add'
 alias gpo='git push origin'
-
-#--------#
-# pacman #
-#--------#
-alias paci='sudo pacman -S'       # install
-alias pachi='sudo pacman -Ql'     # Pacman has installed - what files were installed in a package
-alias pacs='sudo pacman -Ss'      # search
-alias pacu='sudo pacman -Syu'     # update
-alias pacr='sudo pacman -R'       # remove package but not dependencies
-alias pacrr='sudo pacman -Rs'     # remove package with unused dependencies by other softwares
-alias pacrc='sudo pacman -Sc'     # clean cache
-alias pacls='sudo pacman -Qe'     # list installed package
-
-#-----#
-# yay #
-#-----#
-alias yayi='yay -S'       # install
-alias yayhi='yay -Ql'     # Yay has installed - what files were installed in a package
-alias yays='yay -Ss'      # search
-alias yayu='yay -Syu'     # update
-alias yayr='yay -R'       # remove package but not dependencies
-alias yayrr='yay -Rs'     # remove package with unused dependencies by other softwares
-alias yayrc='yay -Sc'      # clean cache
-alias yayls='yay -Qe'     # list installed package
+alias gt='gitui'
 
 #----------#
 # Personal #
 #----------#
-# directories 
+# script
+alias fixhis='source $HOME/personal/custom_scripts/fix_zsh_hist.bash'
+
+# directories
 alias person='cd $HOME/personal'
 alias workspace='cd $HOME/workspace'
 alias talia='cd $HOME/workspace/talia'
-alias dot="cd $HOME/personal/dotfiles"            # dotfiles
+alias dot="cd $HOME/personal/dotfiles"
+alias tut='cd $HOME/workspace/tutorial'
+alias nd='cd $HOME/personal/notes'
 
 # configs
 alias conf='cd $HOME/.config'
 alias zconf='cd $HOME/.config/zsh'
 alias srzsh='source $HOME/.config/zsh/.zshrc'
+
+# dev
+alias bsl='brew services list'
+alias bsu='brew update'
+alias bsuu='brew upgrade'
+
+## apt 
+alias aptu='sudo apt update'
+alias aptuu='sudo apt upgrade'
+alias aptl='apt list --upgradable'
+
+# windows
+alias windir='cd /mnt/c/Users/thomaslwk'
+alias obnotes='cd /mnt/c/Users/thomaslwk/Documents/thomasdev'
 

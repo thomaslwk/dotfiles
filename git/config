@@ -29,6 +29,7 @@
 	features = line-numbers decorations
 	line-numbers = true
 	side-by-side = true
+	features = collared-trogon
 
 [delta "decorations"]
 	minus-style = red bold normal

@@ -1,8 +1,8 @@
-<scheme name="HTB_Custom" version="142" parent_scheme="Darcula">
+<scheme name="mein" version="142" parent_scheme="Darcula">
   <metaInfo>
     <property name="ide">PhpStorm</property>
-    <property name="ideVersion">2024.1.4.0.0</property>
-    <property name="originalScheme">HTB_Custom</property>
+    <property name="ideVersion">2024.3.0.0</property>
+    <property name="originalScheme">mein</property>
   </metaInfo>
   <colors>
     <option name="ANNOTATIONS_COLOR" value="0" />
@@ -13,9 +13,10 @@
     <option name="BLOCK_TERMINAL_INACTIVE_SELECTED_BLOCK_BACKGROUND" value="202b3d" />
     <option name="BLOCK_TERMINAL_INACTIVE_SELECTED_BLOCK_STROKE_COLOR" value="ebdbb2" />
     <option name="CARET_COLOR" value="a4b1cd" />
-    <option name="CARET_ROW_COLOR" value="212121" />
-    <option name="CONSOLE_BACKGROUND_KEY" value="202b3d" />
+    <option name="CARET_ROW_COLOR" value="27292a" />
+    <option name="CONSOLE_BACKGROUND_KEY" value="" />
     <option name="DOCUMENTATION_COLOR" value="2b2d2f" />
+    <option name="EDITOR_GUTTER_BACKGROUND" value="" />
     <option name="FILESTATUS_ADDED" value="c3e887" />
     <option name="FILESTATUS_COPIED" value="73bd79" />
     <option name="FILESTATUS_DELETED" value="f77669" />
@@ -623,7 +624,7 @@
     <option name="DEFAULT_BLOCK_COMMENT">
       <value>
         <option name="FOREGROUND" value="a89984" />
-        <option name="FONT_TYPE" value="2" />
+        <option name="FONT_TYPE" value="3" />
       </value>
     </option>
     <option name="DEFAULT_BRACES">
@@ -709,7 +710,7 @@
     </option>
     <option name="DEFAULT_KEYWORD">
       <value>
-        <option name="FOREGROUND" value="ff908e" />
+        <option name="FOREGROUND" value="de7f7f" />
         <option name="FONT_TYPE" value="3" />
       </value>
     </option>
@@ -731,7 +732,7 @@
     </option>
     <option name="DEFAULT_OPERATION_SIGN">
       <value>
-        <option name="FOREGROUND" value="9dd2bb" />
+        <option name="FOREGROUND" value="ffa000" />
       </value>
     </option>
     <option name="DEFAULT_PARENTHS">
@@ -741,7 +742,7 @@
     </option>
     <option name="DEFAULT_PREDEFINED_SYMBOL">
       <value>
-        <option name="FOREGROUND" value="ff8484" />
+        <option name="FOREGROUND" value="ff9a9b" />
       </value>
     </option>
     <option name="DEFAULT_REASSIGNED_LOCAL_VARIABLE" baseAttributes="DEFAULT_LOCAL_VARIABLE" />
@@ -755,7 +756,7 @@
     <option name="DEFAULT_STATIC_METHOD" baseAttributes="DEFAULT_FUNCTION_DECLARATION" />
     <option name="DEFAULT_STRING">
       <value>
-        <option name="FOREGROUND" value="b6e983" />
+        <option name="FOREGROUND" value="ff8484" />
       </value>
     </option>
     <option name="DEFAULT_TAG">
@@ -1022,7 +1023,7 @@
     <option name="IMPLICIT_ANONYMOUS_CLASS_PARAMETER_ATTRIBUTES" baseAttributes="" />
     <option name="INFO_ATTRIBUTES">
       <value>
-        <option name="EFFECT_COLOR" value="343434" />
+        <option name="EFFECT_COLOR" value="bc713c" />
         <option name="EFFECT_TYPE" value="4" />
       </value>
     </option>
@@ -1033,23 +1034,20 @@
     </option>
     <option name="INLINE_PARAMETER_HINT">
       <value>
-        <option name="FOREGROUND" value="ffffff" />
-        <option name="BACKGROUND" value="5783c5" />
-        <option name="FONT_TYPE" value="1" />
+        <option name="FOREGROUND" value="e1e1e1" />
+        <option name="BACKGROUND" value="393e43" />
       </value>
     </option>
     <option name="INLINE_PARAMETER_HINT_CURRENT">
       <value>
-        <option name="FOREGROUND" value="ffffff" />
-        <option name="BACKGROUND" value="5783c5" />
-        <option name="FONT_TYPE" value="1" />
+        <option name="FOREGROUND" value="e1e1e1" />
+        <option name="BACKGROUND" value="393e43" />
       </value>
     </option>
     <option name="INLINE_PARAMETER_HINT_HIGHLIGHTED">
       <value>
-        <option name="FOREGROUND" value="ffffff" />
-        <option name="BACKGROUND" value="5783c5" />
-        <option name="FONT_TYPE" value="1" />
+        <option name="FOREGROUND" value="e1e1e1" />
+        <option name="BACKGROUND" value="393e43" />
       </value>
     </option>
     <option name="IVAR">
@@ -1152,7 +1150,9 @@
       </value>
     </option>
     <option name="NOT_USED_ELEMENT_ATTRIBUTES">
-      <value />
+      <value>
+        <option name="EFFECT_COLOR" value="e1e1e1" />
+      </value>
     </option>
     <option name="OC.BADCHARACTER">
       <value>
@@ -1851,10 +1851,15 @@
         <option name="FOREGROUND" value="5cb2ff" />
       </value>
     </option>
+    <option name="TEMPLATE_VARIABLE_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="9b4ebe" />
+      </value>
+    </option>
     <option name="TEXT">
       <value>
         <option name="FOREGROUND" value="dadbc0" />
-        <option name="BACKGROUND" value="151515" />
+        <option name="BACKGROUND" value="191919" />
       </value>
     </option>
     <option name="TEXT_SEARCH_RESULT_ATTRIBUTES">
@@ -1883,7 +1888,7 @@
     </option>
     <option name="TODO_DEFAULT_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="50894d" />
+        <option name="FOREGROUND" value="b97051" />
         <option name="FONT_TYPE" value="3" />
       </value>
     </option>
@@ -1905,7 +1910,8 @@
     </option>
     <option name="WARNING_ATTRIBUTES">
       <value>
-        <option name="EFFECT_TYPE" value="1" />
+        <option name="EFFECT_COLOR" value="bc3f3c" />
+        <option name="EFFECT_TYPE" value="4" />
       </value>
     </option>
     <option name="WRITE_IDENTIFIER_UNDER_CARET_ATTRIBUTES">

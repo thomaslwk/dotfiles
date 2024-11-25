@@ -1,14 +1,25 @@
 sethandler a:ide
 
-## NERDTree
+" NERDTree
 set NERDTree
-nnoremap <C-Space> :NERDTreeToggle<CR>
+nnoremap <C-e> :NERDTreeToggle<CR>
 
-## Keymapping
+" Quickscope
+set quickscope
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+let g:qs_primary_color = '#ff0000'
+
+" Sneak 
+set sneak
+
+" Easymotion
+let mapleader="\<Space>"
+set easymotion
+map <Leader> <Plug>(easymotion-prefix)
+
+" Keymapping
 inoremap jk <Esc>
 
-## Highlightyank
+" Highlightyank
 set highlightedyank
 let g:highlightedyank_highlight_duration = "400"
-
-

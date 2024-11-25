@@ -1,9 +1,12 @@
 #-------------------------------------------
-# ZSH Config  
+# ZSH Config
 #-------------------------------------------
-#ZSH_THEME="devbuntu"
 
-ZSH_THEME="crcandy"
+ZSH_THEME=""	# config for starship
+
+## unused zsh theme
+#ZSH_THEME="crcandy"
+
 plugins=(
 	git
 	fzf
@@ -13,9 +16,9 @@ plugins=(
 source $ZDOTDIR/ohmyzsh/oh-my-zsh.sh
 
 #-------------------------------------------
-# fzf  
+# fzf
 #-------------------------------------------
-export FZF_DEFAULT_OPTS='--height 40% 
+export FZF_DEFAULT_OPTS='--height 40%
 --layout=reverse --border=rounded
 --color=dark
 '
@@ -28,7 +31,7 @@ unsetopt sharehistory
 #-------------------------------------------
 # configurations
 #-------------------------------------------
-## Main 
+## Main
 export EDITOR=vim
 export GIT_EDITOR=vim
 export PAGER=delta
@@ -39,12 +42,22 @@ export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:/usr/bin"
 export PATH="$PATH:$HOME/.cargo/bin"
 
+## Notes
+export NOTES_DIRECTORY="$HOME/personal/notes"
+
 ## NVM
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-## Alias and Function 
+## Man Bat
+export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
+export MANROFFOPT="-c"
+
+## Alias and Function
 source $HOME/.config/zsh/.zsh_aliases
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+## Starship Prompt
+eval "$(starship init zsh)"
 
