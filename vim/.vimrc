@@ -6,7 +6,7 @@ call plug#begin()
 	Plug 'preservim/nerdtree'
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
-    Plug 'joshdick/onedark'
+	Plug 'joshdick/onedark'
 	Plug 'machakann/vim-highlightedyank'
 call plug#end()
 " ---------------------------------------------------
