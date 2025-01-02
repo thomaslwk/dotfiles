@@ -1,11 +1,7 @@
 #-------------------------------------------
 # ZSH Config
 #-------------------------------------------
-
-ZSH_THEME=""	# config for starship
-
-## unused zsh theme
-#ZSH_THEME="crcandy"
+ZSH_THEME=""
 
 plugins=(
 	git
