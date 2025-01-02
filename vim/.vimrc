@@ -5,19 +5,18 @@ call plug#begin()
 	Plug 'tpope/vim-sensible'
 	Plug 'preservim/nerdtree'
 	Plug 'vim-airline/vim-airline'
+    Plug 'morhetz/gruvbox'
 	Plug 'vim-airline/vim-airline-themes'
-	Plug 'joshdick/onedark'
 	Plug 'machakann/vim-highlightedyank'
 call plug#end()
 " ---------------------------------------------------
 
 " ---------------------------------------------------
-" Defaults 
+" Defaults
 " ---------------------------------------------------
 syntax enable
 set number          " Show line numbers
 setlocal spell		" Set spell checker
-set background=dark
 
 " Make Vim to handle long lines nicely.
 set wrap
@@ -45,7 +44,7 @@ set shiftround
 " ---------------------------------------------------
 " Keymapping
 " ---------------------------------------------------
-" Set jk as escape key 
+" Set jk as escape key
 inoremap jk <Esc>
 
 " Show highlight
@@ -60,4 +59,12 @@ nnoremap <C-e> :NERDTreeToggle<Cr>
 
 " vim-airline config
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='angr'
+let g:airline_theme='gruvbox'
+
+" ---------------------------------------------------
+" Theme
+" ---------------------------------------------------
+let g:gruvbox_contrast_dark='soft'
+let g:gruvbox_italicize_strings='1'
+set background=dark
+colorscheme gruvbox
