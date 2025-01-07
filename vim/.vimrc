@@ -5,15 +5,16 @@ call plug#begin()
 	Plug 'tpope/vim-sensible'
 	Plug 'preservim/nerdtree'
 	Plug 'vim-airline/vim-airline'
-    Plug 'morhetz/gruvbox'
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'machakann/vim-highlightedyank'
+    Plug 'ghifarit53/tokyonight-vim'
 call plug#end()
 " ---------------------------------------------------
 
 " ---------------------------------------------------
 " Defaults
 " ---------------------------------------------------
+set termguicolors
 syntax enable
 set number          " Show line numbers
 setlocal spell		" Set spell checker
@@ -59,12 +60,11 @@ nnoremap <C-e> :NERDTreeToggle<Cr>
 
 " vim-airline config
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='gruvbox'
+let g:airline_theme='tokyonight'
 
 " ---------------------------------------------------
 " Theme
 " ---------------------------------------------------
-let g:gruvbox_contrast_dark='soft'
-let g:gruvbox_italicize_strings='1'
-set background=dark
-colorscheme gruvbox
+let g:tokyonight_style = 'storm' " available: night, storm
+let g:tokyonight_enable_italic = 1
+colorscheme tokyonight
