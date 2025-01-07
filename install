@@ -18,6 +18,8 @@ ln -s $DOTFILES/starship/starship.toml $HOME/.config/starship.toml
 
 rm -rf $HOME/.vimrc
 ln -s $DOTFILES/vim/.vimrc $HOME/.vimrc
+rm -rf $HOME/.config/ideavim
+ln -s $DOTFILES/ideavim/ $HOME/.config/ideavim
 rm -rf $HOME/.zshenv
 ln -s $DOTFILES/zsh/.zshenv $HOME/.zshenv
 
