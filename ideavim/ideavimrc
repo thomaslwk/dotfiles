@@ -4,6 +4,7 @@
 let mapleader="\<Space>"
 inoremap jk <Esc>
 
+sethandler a:ide
 set relativenumber
 set smartcase 
 set ignorecase
