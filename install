@@ -14,11 +14,6 @@ rm -rf $HOME/.config/zsh
 ln -s $DOTFILES/zsh $HOME/.config/zsh
 rm -rf $HOME/.config/starship.toml
 ln -s $DOTFILES/starship/starship.toml $HOME/.config/starship.toml
-rm -rf $HOME/.config/sway
-ln -s $DOTFILES/sway $HOME/.config/sway
-rm -rf $HOME/.config/waybar
-ln -s $DOTFILES/waybar $HOME/.config/waybar
-
 
 rm -rf $HOME/.vimrc
 ln -s $DOTFILES/vim/.vimrc $HOME/.vimrc
