@@ -12,7 +12,7 @@ return {
       section_separators = "",
       component_separators = "",
       globalstatus = true,
-      theme = "onedark",
+      theme = "tokyonight",
       -- theme = {
       --   normal = {
       --     a = "StatusLine",
