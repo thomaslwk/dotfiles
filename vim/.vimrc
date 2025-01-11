@@ -1,70 +1,96 @@
 " ---------------------------------------------------
 " Plugins
-" ---------------------------------------------------
+" --------------------------------------------------
 call plug#begin()
 	Plug 'tpope/vim-sensible'
 	Plug 'preservim/nerdtree'
 	Plug 'vim-airline/vim-airline'
+	Plug 'ghifarit53/tokyonight-vim'
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'machakann/vim-highlightedyank'
-    Plug 'ghifarit53/tokyonight-vim'
 call plug#end()
 " ---------------------------------------------------
 
 " ---------------------------------------------------
-" Defaults
+"  Defaults
 " ---------------------------------------------------
+" Enable 24-bit color support for the terminal
 set termguicolors
-syntax enable
-set number          " Show line numbers
-setlocal spell		" Set spell checker
 
-" Make Vim to handle long lines nicely.
+" Enable syntax highlighting
+syntax enable
+
+" Display line numbers
+set number
+
+" Enable spell checking
+setlocal spell
+
+" Enable wrapping for long lines and set the maximum text width to 80 characters
 set wrap
 set textwidth=80
 set formatoptions=qrn1
 
-" Do not use relative numbers to where the cursor is.
-set relativenumber
+" Enable relative line numbers only in normal mode (disables in insert mode)
+autocmd InsertEnter * set norelativenumber
+autocmd InsertLeave * set relativenumber
 
-" Apply the indentation of the current line to the next line.
+" Enable automatic indentation and smart indentation
 set autoindent
 set smartindent
+
+" Set filetype to help (this will override the filetype automatically when opening help files)
+set ft=help
+
+" Disable completion with the 'i' flag (used for inserting text)
 set complete-=i
+
+" Show matching parentheses, brackets, and braces when the cursor is over one
 set showmatch
+
+" Enable smart tab behavior (uses spaces instead of tabs for indentation)
 set smarttab
 set tabstop=4
 set shiftwidth=4
 set expandtab
+
+" Disable octal number format
 set nrformats-=octal
 
-" Enable backspace
+" Enable backspace behavior in insert mode (allows backspacing over indentation, end-of-line, and start of line)
 set backspace=indent,eol,start
+
+" Enable rounding of indentation in insert mode
 set shiftround
 
 " ---------------------------------------------------
 " Keymapping
 " ---------------------------------------------------
-" Set jk as escape key
+" Map 'jk' to Escape in insert mode (useful for avoiding the awkward ESC key)
 inoremap jk <Esc>
 
-" Show highlight
+" Set up highlighting for recently yanked text for 3 seconds
 let g:highlightedyank_highlight_duration = 3000
 highlight HighlightedyankRegion cterm=reverse gui=reverse
 
-"Remove all trailing whitespace by pressing F5
+" Map F5 to remove all trailing whitespace from the current line or the entire buffer
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+" Provide feedback after trailing whitespace removal
+autocmd TextYankPost * if v:event.operator == 'y' && v:event.regname == '' | echo "Trailing whitespace removed!" | endif
 
-" Nerdtree
+" Nerdtree toggle (Open/Close NERDTree file explorer with Ctrl+e)
 nnoremap <C-e> :NERDTreeToggle<Cr>
-
-" vim-airline config
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='tokyonight'
 
 " ---------------------------------------------------
 " Theme
 " ---------------------------------------------------
-let g:tokyonight_style = 'storm' " available: night, storm
-let g:tokyonight_enable_italic = 1
+" Enable the tabline in vim-airline for showing tabs
+let g:airline#extensions#tabline#enabled = 1
+" Set vim-airline theme to 'onedark'
+let g:airline_theme='onedark'
+
+" Configure Tokyo Night theme
+let g:tokyonight_style = 'storm'  " Available styles: 'night', 'storm'
+let g:tokyonight_enable_italic = 1  " Enable italic fonts for comments
 colorscheme tokyonight
+
