@@ -17,9 +17,7 @@ source $ZDOTDIR/ohmyzsh/oh-my-zsh.sh
 export FZF_DEFAULT_COMMAND='ag -u -g ""'
 export FZF_DEFAULT_OPTS='
 --border=rounded
---margin=8,10
 --color=dark
---height 40%
 --color=fg:-1,bg:-1,hl:#c678dd,fg+:#ffffff,bg+:#4b5263,hl+:#d858fe
 --color=info:#98c379,prompt:#61afef,pointer:#be5046,marker:#e5c07b,spinner:#61afef,header:#61afef,gutter:-1,border:#1f2335
 '
@@ -41,7 +39,7 @@ export PATH="$PATH:/usr/bin"
 export PATH="$PATH:$HOME/.cargo/bin"
 
 ## Notes
-export NOTES_DIRECTORY="$HOME/personal/notes"
+#export NOTES_DIRECTORY="$HOME/personal/notes"
 
 ## NVM
 export NVM_DIR="$HOME/.config/nvm"
