@@ -1,6 +1,8 @@
 #---------------------------------------------------
 # Alias
 #---------------------------------------------------
+# nvim 
+alias vim='nvim'
 
 # system
 alias shutdown='sudo shutdown now'

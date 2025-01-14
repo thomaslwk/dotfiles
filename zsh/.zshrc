@@ -28,8 +28,8 @@ unsetopt sharehistory
 # configurations
 #-------------------------------------------
 ## Main
-export EDITOR=vim
-export GIT_EDITOR=vim
+export EDITOR=nvim
+export GIT_EDITOR=nvim
 export PAGER=delta
 
 ## System path
