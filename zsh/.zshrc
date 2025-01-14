@@ -2,6 +2,11 @@
 # ZSH Config
 #-------------------------------------------
 ZSH_THEME=""
+HYPHEN_INSENSITIVE="true"
+COMPLETION_WAITING_DOTS="true"
+HIST_STAMPS="yyyy-mm-dd"
+VI_MODE_SET_CURSOR=true
+VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
 
 plugins=(
 	git
@@ -9,6 +14,7 @@ plugins=(
 	zsh-autosuggestions
 	zsh-syntax-highlighting
 )
+
 source $ZDOTDIR/ohmyzsh/oh-my-zsh.sh
 
 #-------------------------------------------

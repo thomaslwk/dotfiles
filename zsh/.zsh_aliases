@@ -3,6 +3,7 @@
 #---------------------------------------------------
 # nvim 
 alias vim='nvim'
+alias cat='batcat'
 
 # system
 alias shutdown='sudo shutdown now'
@@ -58,6 +59,6 @@ alias aptuu='sudo apt upgrade'
 alias aptl='apt list --upgradable'
 
 # windows
-alias windir='cd /mnt/c/Users/thomaslwk'
-alias obnotes='cd /mnt/c/Users/thomaslwk/Documents/thomasdev'
+#alias windir='cd /mnt/c/Users/thomaslwk'
+#alias obnotes='cd /mnt/c/Users/thomaslwk/Documents/thomasdev'
 
