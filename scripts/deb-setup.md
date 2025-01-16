@@ -32,3 +32,5 @@ nvm
 beekeeperstudio
 libreoffice
 
+## 
+nix install
