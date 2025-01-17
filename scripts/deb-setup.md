@@ -30,7 +30,9 @@ redis
 postgresql
 nvm 
 beekeeperstudio
+bat
 libreoffice
 
 ## 
 nix install
+
