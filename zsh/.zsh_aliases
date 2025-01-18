@@ -2,7 +2,7 @@
 # Alias
 #---------------------------------------------------
 # nvim 
-alias vim='nvim'
+#alias vim='nvim'
 alias cat='batcat'
 
 # system
@@ -33,14 +33,13 @@ alias gt='gitui'
 # Personal #
 #----------#
 # script
-alias fixhis='source $HOME/personal/custom_scripts/fix_zsh_hist.bash'
+#alias fixhis='source $HOME/personal/custom_scripts/fix_zsh_hist.bash'
 
 # directories
 alias person='cd $HOME/personal'
 alias workspace='cd $HOME/workspace'
 alias talia='cd $HOME/workspace/talia'
 alias dot="cd $HOME/personal/dotfiles"
-alias tut='cd $HOME/workspace/tutorial'
 alias nd='cd $HOME/personal/notes'
 
 # configs
