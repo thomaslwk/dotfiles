@@ -87,7 +87,7 @@ nnoremap <C-e> :NERDTreeToggle<Cr>
 " Enable the tabline in vim-airline for showing tabs
 let g:airline#extensions#tabline#enabled = 1
 " Set vim-airline theme to 'onedark'
-let g:airline_theme='onedark'
+let g:airline_theme='tokyonight'
 
 " Configure Tokyo Night theme
 let g:tokyonight_style = 'storm'  " Available styles: 'night', 'storm'
