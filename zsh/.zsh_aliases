@@ -58,6 +58,6 @@ alias aptuu='sudo apt upgrade'
 alias aptl='apt list --upgradable'
 
 # windows
-#alias windir='cd /mnt/c/Users/thomaslwk'
+alias windir='cd /mnt/c/Users/thomas'
 #alias obnotes='cd /mnt/c/Users/thomaslwk/Documents/thomasdev'
 
