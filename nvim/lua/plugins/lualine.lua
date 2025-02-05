@@ -13,13 +13,6 @@ return {
       component_separators = "",
       globalstatus = true,
       theme = "tokyonight",
-      -- theme = {
-      --   normal = {
-      --     a = "StatusLine",
-      --     b = "StatusLine",
-      --     c = "StatusLine",
-      --   },
-      -- },
     },
     sections = {
       lualine_a = {
