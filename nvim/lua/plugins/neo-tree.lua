@@ -4,8 +4,8 @@ return {
   "nvim-neo-tree/neo-tree.nvim",
   opts = {
     window = {
-      position = "right", -- Set NeoTree to open on the right
-      width = 35, -- Optional: Adjust the width of the NeoTree pane
+      position = "left", -- Set NeoTree to open on the right
+      -- width = 45, -- Optional: Adjust the width of the NeoTree pane
     },
   },
 }

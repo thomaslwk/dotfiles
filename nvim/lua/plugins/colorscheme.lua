@@ -11,7 +11,7 @@ return {
       styles = {
         functions = { bold = true },
       },
-      -- sidebars = "transparent",
+      sidebars = "normal",
     }),
   },
 }
