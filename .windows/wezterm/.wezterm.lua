@@ -14,15 +14,16 @@ config.default_cursor_style = "SteadyBlock"
 config.term = "xterm-256color" -- Set the terminal type
 
 config.default_domain = 'WSL:Ubuntu-24.04'
+-- config.font = wezterm.font 'FantasqueSansM Nerd Font'
 config.font = wezterm.font 'JetBrainsMono Nerd Font'
 
 -- For example, changing the color scheme:
 config.color_scheme = 'tokyonight-storm'
 
--- config.cell_width = 0.9
-config.line_height = 1.7
-config.window_background_opacity = 0.9
-config.prefer_egl = true
+--jconfig.cell_width = 0.9
+config.line_height = 1.5
+config.window_background_opacity = 0.98
+-- config.prefer_egl = true
 config.font_size = 11.0
 
 config.window_padding = {
