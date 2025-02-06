@@ -1,32 +1,18 @@
 -- Formater for php
 
 return {
-  {
-    "stevearc/conform.nvim",
-    optional = true,
-    opts = {
-      formatters_by_ft = {
-        php = { { "pint", "php_cs_fixer" } },
-      },
+  "stevearc/conform.nvim",
+  opts = {
+    formatters_by_ft = {
+      php = { "pint" },
+      javascript = { "eslint_d", stop_after_first = true },
+      typescript = { "eslint_d", stop_after_first = true },
+      typescriptreact = { "eslint_d", stop_after_first = true },
     },
-  },
-  {
-    -- Remove phpcs linter.
-    "mfussenegger/nvim-lint",
-    optional = true,
-    opts = {
-      linters_by_ft = {
-        php = {},
-      },
+    format_on_save = {
+      -- These options will be passed to conform.format()
+      timeout_ms = 1000,
+      -- lsp_format = "fallback",
     },
-  },
-  {
-    -- Add the blade-nav.nvim plugin which provides Goto File capabilities
-    -- for Blade files.
-    "ricardoramirezr/blade-nav.nvim",
-    dependencies = {
-      "hrsh7th/nvim-cmp",
-    },
-    ft = { "blade", "php" },
   },
 }
