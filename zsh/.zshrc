@@ -1,7 +1,11 @@
 #-------------------------------------------
 # ZSH Config
 #-------------------------------------------
-ZSH_THEME=""
+#ZSH_THEME="juanghurtado"
+#ZSH_THEME="peepcode"
+ZSH_THEME="crcandy"
+#ZSH_THEME="candy"
+
 HYPHEN_INSENSITIVE="true"
 COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="yyyy-mm-dd"
@@ -61,4 +65,4 @@ source $HOME/.config/zsh/.zsh_aliases
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 ## Starship Prompt
-eval "$(starship init zsh)"
+#eval "$(starship init zsh)"
