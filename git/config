@@ -8,6 +8,9 @@
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
 	pager = delta
 
+[include]
+    path = /home/thomaslwk/.config/git/delta-themes/themes.gitconfig
+
 [color]
 	ui = auto
 [color "branch"]
@@ -29,7 +32,7 @@
 	features = line-numbers decorations
 	line-numbers = true
 	side-by-side = true
-	features = collared-trogon
+	features = mellow-barbet
 
 [delta "decorations"]
 	minus-style = red bold normal
