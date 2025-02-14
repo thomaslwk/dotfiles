@@ -5,7 +5,7 @@ call plug#begin()
 	Plug 'tpope/vim-sensible'
 	Plug 'preservim/nerdtree'
 	Plug 'vim-airline/vim-airline'
-	Plug 'ghifarit53/tokyonight-vim'
+    Plug 'morhetz/gruvbox'
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'machakann/vim-highlightedyank'
 call plug#end()
@@ -75,6 +75,7 @@ highlight HighlightedyankRegion cterm=reverse gui=reverse
 
 " Map F5 to remove all trailing whitespace from the current line or the entire buffer
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+
 " Provide feedback after trailing whitespace removal
 autocmd TextYankPost * if v:event.operator == 'y' && v:event.regname == '' | echo "Trailing whitespace removed!" | endif
 
@@ -86,11 +87,10 @@ nnoremap <C-e> :NERDTreeToggle<Cr>
 " ---------------------------------------------------
 " Enable the tabline in vim-airline for showing tabs
 let g:airline#extensions#tabline#enabled = 1
-" Set vim-airline theme to 'onedark'
-let g:airline_theme='tokyonight'
+let g:airline_theme ='gruvbox'
 
-" Configure Tokyo Night theme
-let g:tokyonight_style = 'storm'  " Available styles: 'night', 'storm'
-let g:tokyonight_enable_italic = 1  " Enable italic fonts for comments
-colorscheme tokyonight
+let g:gruvbox_contrast_light = "hard"
+let g:gruvbox_italicize_comments = 1
+colorscheme gruvbox
+
 
