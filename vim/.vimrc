@@ -17,6 +17,9 @@ call plug#end()
 " Enable 24-bit color support for the terminal
 set termguicolors
 
+" Set dark theme
+set bg=dark
+
 " Enable syntax highlighting
 syntax enable
 
@@ -89,8 +92,7 @@ nnoremap <C-e> :NERDTreeToggle<Cr>
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme ='gruvbox'
 
-let g:gruvbox_contrast_light = "hard"
-let g:gruvbox_italicize_comments = 1
+let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
 
 
