@@ -18,7 +18,7 @@ call plug#end()
 set termguicolors
 
 " Set dark theme
-set bg=dark
+" set bg=dark
 
 " Enable syntax highlighting
 syntax enable
