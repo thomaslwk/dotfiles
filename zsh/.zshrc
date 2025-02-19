@@ -1,14 +1,16 @@
 #-------------------------------------------
 # ZSH Config
 #-------------------------------------------
-#ZSH_THEME="juanghurtado"
+# P10k
+#-------------------------------------------
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 #ZSH_THEME="peepcode"
 #ZSH_THEME="candy"
-#ZSH_THEME="agnoster"
-#ZSH_THEME="robbyrussell"
-#ZSH_THEME="refined"
 #ZSH_THEME="jispwoso"
-#ZSH_THEME="af-magic"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 HYPHEN_INSENSITIVE="true"
 COMPLETION_WAITING_DOTS="true"
@@ -69,4 +71,8 @@ source $HOME/.config/zsh/.zsh_aliases
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 ## Starship Prompt
-eval "$(starship init zsh)"
+#eval "$(starship init zsh)"
+
+## P10k Prompt
+[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+[[ ! -f ~/personal/dotfiles/zsh/.p10k.zsh ]] || source ~/personal/dotfiles/zsh/.p10k.zsh
