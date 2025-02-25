@@ -6,7 +6,7 @@ return {
   priority = 1000,
   opts = {
     require("tokyonight").setup({
-      style = "day",
+      style = "night",
       transparent = false,
       styles = {
         functions = { bold = true },
