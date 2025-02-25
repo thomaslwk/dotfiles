@@ -32,7 +32,7 @@
 	features = line-numbers decorations
 	line-numbers = true
 	side-by-side = true
-	features = hoopoe
+    features = chameleon
 
 [delta "decorations"]
 	minus-style = red bold normal
