@@ -12,7 +12,7 @@ return {
       section_separators = "",
       component_separators = "",
       globalstatus = true,
-      theme = "tokyonight",
+      theme = "gruvbox",
     },
     sections = {
       lualine_a = {
