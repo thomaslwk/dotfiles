@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+rm -rf $HOME/.config/git
+ln -s /home/thomasdev/personal/dotfiles/git $HOME/.config/git
+
+rm -rf $HOME/.config/nvim
+ln -s /home/thomasdev/personal/dotfiles/nvim $HOME/.config/nvim
+
+rm -rf $HOME/.config/tmux
+ln -s  /home/thomasdev/personal/dotfiles/tmux $HOME/.config/tmux
+
+rm -rf $HOME/.config/zsh
+ln -s /home/thomasdev/personal/dotfiles/zsh $HOME/.config/zsh
+
+rm -rf $HOME/.vimrc
+ln -s /home/thomasdev/personal/dotfiles/vim/.vimrc $HOME/.vimrc
+
+rm -rf $HOME/.config/ideavim
+ln -s /home/thomasdev/personal/dotfiles/ideavim/ $HOME/.config/ideavim
+
+rm -rf $HOME/.zshenv
+ln -s /home/thomasdev/personal/dotfiles/zsh/.zshenv $HOME/.zshenv
