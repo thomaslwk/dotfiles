@@ -1,0 +1,121 @@
+@import 'https://www.nerdfonts.com/assets/css/webfont.css';
+
+i {
+  color: rgb(0 0 0 / 80%);
+  margin-right: 7px;
+}
+
+body {
+  color: rgb(0 0 0 / 90%);
+  font-family: CaskaydiaCove Nerd Font, ui-monospace, monospace;
+  font-weight: bold;
+  font-size: 12px;
+  overflow: hidden;
+}
+
+div,
+span,
+p {
+  cursor: default;
+  user-select: none;
+}
+
+html,
+body,
+#root {
+  /* height: 100%; */
+}
+
+#root {
+  /* background: rgb(255 255 255 / 90%); */
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  height: 100%;
+  padding: 4px 1.5vw;
+}
+
+.left,
+.center,
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.center {
+  justify-self: center;
+}
+
+.right {
+  justify-self: end;
+}
+
+.logo,
+.binding-mode,
+.tiling-direction,
+.paused-button,
+.network,
+.memory,
+.cpu,
+.battery {
+  margin-right: 20px;
+}
+
+.workspaces {
+  display: flex;
+  align-items: center;
+}
+
+.workspace {
+  background: rgb(255 255 255 / 5%);
+  margin-right: 4px;
+  padding: 4px 8px;
+  color: rgb(255 255 255 / 90%);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &.displayed {
+  /*  background: rgb(255 255 255 / 50%); */
+  }
+
+  &.focused,
+  &:hover {
+    /* background: rgb(75 115 255 / 50%); */
+    background: rgb(0 0 0 / 60%);
+  }
+}
+
+.binding-mode,
+.tiling-direction,
+.paused-button {
+  background: rgb(255 255 255 / 5%);
+  color: rgb(0 0 0 / 90%);
+  border-radius: 4px;
+  line-height: 1;
+  padding: 4px 8px;
+  border: 0;
+  cursor: pointer;
+}
+
+.binding-mode {
+  margin-right: 4px;
+}
+
+.cpu .high-usage {
+  color: #900029;
+}
+
+.battery {
+  position: relative;
+}
+
+.battery .charging-icon {
+  position: absolute;
+  font-size: 7px;
+  left: -8px;
+  top: 3px;
+}
