@@ -1,11 +1,18 @@
 general:
   # Commands to run when the WM has started. This is useful for running a
   # script or launching another application.
-  # Example: The below command launches Zebar.  startup_commands: ['shell-exec zebar']
+  # Example: The below command launches Zebar.  
+  startup_commands: 
+        [
+            'shell-exec zebar'
+        ]
 
   # Commands to run just before the WM is shutdown.
   # Example: The below command kills Zebar.
-  shutdown_commands: ['shell-exec taskkill /IM zebar.exe /F']
+  shutdown_commands: 
+          [
+              'shell-exec taskkill /IM zebar.exe /F'
+          ]
 
   # Commands to run after the WM config is reloaded.
   config_reload_commands: []
@@ -24,7 +31,7 @@ general:
     # Trigger for cursor jump:
     # - 'monitor_focus': Jump when focus changes between monitors.
     # - 'window_focus': Jump when focus changes between windows.
-    trigger: 'monitor_focus'
+    trigger: 'window_focus'
 
   # How windows should be hidden when switching workspaces.
   # - 'cloak': Recommended. Hides windows with no animation.
@@ -43,24 +50,23 @@ gaps:
   scale_with_dpi: true
 
   # Gap between adjacent windows.
-  inner_gap: '10px'
+  inner_gap: '15px'
 
   # Gap between windows and the screen edge.
   outer_gap:
     top: '32px'
-    right: '10px'
-    bottom: '10px'
-    left: '10px'
+    right: '15px'
+    bottom: '15px'
+    left: '15px'
 
 window_effects:
   # Visual effects to apply to the focused window.
   focused_window:
     # Highlight the window with a colored border.
     # ** Exclusive to Windows 11 due to API limitations.
-    # color: '#8dbcff'
     border:
       enabled: true
-      color: '#ffc777'
+      color: '#8dbcff'
 
     # Remove the title bar from the window's frame. Note that this can
     # cause rendering issues for some applications.
@@ -87,7 +93,7 @@ window_effects:
     # Add transparency to unfocused window (e.g. 'true', 'false')
     transparency:
       enabled: true 
-      opacity: "88%"
+      opacity: "85%"
 
 window_behavior:
   # New windows are created in this state whenever possible.
@@ -103,7 +109,7 @@ window_behavior:
       centered: true
 
       # Whether to show floating windows as always on top.
-      shown_on_top: false
+      shown_on_top: true
 
     fullscreen:
       # Maximize the window if possible. If the window doesn't have a
@@ -244,9 +250,18 @@ keybindings:
   # Launch CMD terminal. Alternatively, use `shell-exec wt` or
   # `shell-exec %ProgramFiles%/Git/git-bash.exe` to start Windows
   # Terminal and Git Bash respectively.
-  # - commands: ['shell-exec --hide-window wezterm']
-  - commands: ['shell-exec wt']
+  # - commands: ['shell-exec wt']
+  #   bindings: ['alt+o']
+  - commands: 
+        [
+        'shell-exec C:\Users\Thomas\scoop\apps\alacritty\0.15.1\alacritty.exe -e wsl ~'
+        ]
     bindings: ['alt+o']
+  - commands: 
+        [
+        'shell-exec C:\Users\Thomas\scoop\apps\alacritty\0.15.1\alacritty.exe'
+        ]
+    bindings: ['alt+shift+o']
 
   # Focus the next/previous active workspace defined in `workspaces` config.
   - commands: ['focus --next-active-workspace']
