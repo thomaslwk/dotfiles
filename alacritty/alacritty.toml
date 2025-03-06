@@ -1,6 +1,8 @@
 [font]
-offset = { x = 1 , y = 4 }
+offset = { x = 1 , y = 8 }
+glyph_offset = { x = 0, y = 3 }
 size = 11
+
 [font.normal]
 family = "CaskaydiaCove Nerd Font"
 style = "Regular"
