@@ -3,4 +3,5 @@
 */plugins
 /zsh/.zcomp*
 /zsh/ohmyzsh
+/zsh/.p10k.zsh
 
