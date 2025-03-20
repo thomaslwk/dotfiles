@@ -54,16 +54,16 @@ export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:/usr/bin"
 export PATH="$PATH:$HOME/.cargo/bin"
 
-## Notes
-#export NOTES_DIRECTORY="$HOME/personal/notes"
+## GO
+export PATH=$PATH:/usr/local/go/bin
+
+## Laravel 
+export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 
 ## NVM
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
-## GO
-export PATH=$PATH:/usr/local/go/bin
 
 ## Man Bat
 export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
