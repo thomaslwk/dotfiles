@@ -1,17 +1,17 @@
 general:
   # Commands to run when the WM has started. This is useful for running a
   # script or launching another application.
-  # Example: The below command launches Zebar.  
-  startup_commands: 
+  # Example: The below command launches Zebar.
+  startup_commands:
         [
-            'shell-exec zebar'
+          #            'shell-exec zebar'
         ]
 
   # Commands to run just before the WM is shutdown.
   # Example: The below command kills Zebar.
-  shutdown_commands: 
+  shutdown_commands:
           [
-              'shell-exec taskkill /IM zebar.exe /F'
+            #    'shell-exec taskkill /IM zebar.exe /F'
           ]
 
   # Commands to run after the WM config is reloaded.
@@ -43,7 +43,7 @@ general:
   # effect if `hide_method: 'hide'`.
   # - 'true': Show all windows (regardless of workspace).
   # - 'false': Only show windows from the currently shown workspaces.
-  show_all_in_taskbar: false
+  show_all_in_taskbar: true
 
 gaps:
   # Whether to scale the gaps with the DPI of the monitor.
@@ -54,7 +54,7 @@ gaps:
 
   # Gap between windows and the screen edge.
   outer_gap:
-    top: '0px'
+    top: '15px'
     right: '15px'
     bottom: '15px'
     left: '15px'
@@ -92,7 +92,7 @@ window_effects:
       style: 'square'
     # Add transparency to unfocused window (e.g. 'true', 'false')
     transparency:
-      enabled: true 
+      enabled: false
       opacity: "85%"
 
 window_behavior:
@@ -147,6 +147,9 @@ window_rules:
         window_title: { regex: '.*? - Peek' }
       - window_process: { equals: 'Lively' }
         window_class: { regex: 'HwndWrapper' }
+
+      # Ignore edge for PDF
+      - window_process: { equals: 'edge' }
 
 binding_modes:
   # When enabled, the focused window can be resized via arrow keys or HJKL.
@@ -252,12 +255,12 @@ keybindings:
   # Terminal and Git Bash respectively.
   - commands: ['shell-exec wt']
     bindings: ['alt+o']
-  # - commands: 
+  # - commands:
   #      [
   #      'shell-exec C:\Users\Thomas\scoop\apps\alacritty\0.15.1\alacritty.exe -e wsl ~'
   #      ]
   #  bindings: ['alt+o']
-  # - commands: 
+  # - commands:
   #      [
   #      'shell-exec C:\Users\Thomas\scoop\apps\alacritty\0.15.1\alacritty.exe'
   #      ]
